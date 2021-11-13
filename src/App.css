@@ -1,38 +1,281 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 70%;
+
+
+/*               NAVBAR STYLING STARTS HERE!              */
+
+ 
+}
+.navbarr {
+  background-color: rgb(13, 18, 29);
+}
+.navbar-brand{
+    font-size: 2.5rem;
+    color: #18EC98 !important;
+}
+.navbar li a {
+  color: #cbd5e0;
+  font-size: 1.5rem;
+  padding: 10px 0px;
+  
+}
+.navbar li {
+  padding: 0px 15px;
+  color: #cbd5e0;
+}
+.navbar li a:hover {
+  color: #18EC98 !important;
+}
+.btn-styl{
+  color: black ;
+  background-color: #18EC98;
+  border: none;
+  font-family:"Poppins", sans-serif ;
+  padding: 7px 20px;
+  border-radius: 5px;
+  margin:0px 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.btn-styl:hover {
+  background-color: rgb(13, 18, 29);
+  color: #18EC98;
+  border: 1px solid #18EC98 ;
+}
+.toogle-btn{
+  color: #cbd5e0;
+  background-color: rgb(13, 18, 29);
+}
+ 
+/*               NAVBAR STYLING ENDS HERE!       26262B       */
+
+
+/*               HEADER STYLING STARTS HERE!              */
+
+header{
+  height: 100vh;
+  width: 100%;
+  background-color:rgb(13, 18, 29) ;
+}
+
+.main-hero-container{
+  height: 80vh;
+  display: flex;
+  padding: 20px;
+}
+.main-hero-container h1{
+  color: #cbd5e0;
+  font-size: 40px;
+  font-weight: normal ;
+}
+.main-hero-container button{
+  background-color: #18EC98;
+  padding:12px 27px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-top: 8px;
+  border: none;
+}
+.main-hero-container button:hover{
+  border: 1px solid #18EC98;
+  background-color:rgb(13, 18, 29);
+  color: #18EC98;
+}
+.main-hero-container img{
+   height: 80%;
+   border-image-width: 80%;
+}
+.main-hero-para {
+  font-size: 1.5rem;
+  color: #cbd5e0;
+  margin: 3rem 0 5rem 0;
+  font-weight: lighter;
+  width: 75%;
+}
+
+/*               HEADER STYLING ENDS HERE!              */
+
+/*               WORKS STYLING STARTS HERE!              */
+
+.work-container {
+  width: 80vw;
+  padding: 5rem;
+  box-shadow: 0px -8px 1rem 2px #18EC98;
+  margin-top: -10rem !important;
+
+  background-color: rgb(13, 18, 29);
+  border-radius: 0.5rem;
+}
+
+.work-container h1{
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 4rem;
+  word-spacing: 1rem;
+  color: white !important;
+}
+
+.work-container-subdiv {
+  padding: 0 6rem;
+}
+
+.worksDiv h2 {
+  font-size: 2rem;
+  font-weight: normal;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
+  
+}
+
+.fontawesome-style {
+  font-size: 2.3rem;
+  color:black;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: #18EC98 ;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin: 2rem auto;
+}
+.work-container p{
+  color: #cbd5e0;
+}
+
+
+/*               WORKS STYLING ENDS HERE!              */
+
+/*               WHEN TO USE STYLING STARTS HERE!              */
+.common-section {
+  margin: 10rem 0;
+}
+
+.our-services img {
+  width: 50%;
+  height: 70%;
+  margin-top: 7rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.8rem 0.8rem;
+  border-radius: 1.5rem;
+}
+
+
+.our-services .main-heading {
+  font-weight: bolder;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.our-services-info {
+  margin-top: 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.our-services .our-services-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0.1rem solid var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+}
+
+.our-services-data {
+  padding-left: 2rem;
+}
+
+.our-services .our-services-data p {
+  margin: 1rem 0;
+}
+/*             WHEN TO USE STYLING ENDS HERE!              */
+
+/*                FAQ STYlING STARTS HERE                  */
+
+/*                FAQ STYlING ENDS HERE                  */
+
+/*                FOOTER STYlING STARTS HERE                  */
+
+footer {
+  padding: 5rem 0;
+  background-color: #182334;
+  color: #fff;
+}
+
+footer h2 {
+  color: #fff;
+}
+
+footer li {
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: #fff;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+footer li:hover {
+  color: var(--primary-color);
+}
+
+footer .fontawesome-style {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  background-color: transparent;
+  width: 0rem;
+  height: 0rem;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+footer .fontawesome-style:hover {
+  transition: all 1s;
+  animation: rotatefont 1s linear infinite alternate-reverse;
+  color: #fff;
+}
+
+@keyframes rotatefont {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1.2);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+footer .main-hero-para {
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/*                FOOTER STYlING STARTS HERE                  */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 1500px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1500px !important;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1400px !important;
   }
 }
