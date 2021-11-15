@@ -114,7 +114,7 @@ function AirDrop() {
               {airdropWallets.map((wallet, i) => (
                 <tr key={`wallet-${i}`}>
                   <td>{wallet.address}</td>
-                  <td>{wallet.amount}</td>
+                  <td>{wallet.orgAmount}</td>
                 </tr>
               ))}
             </tbody>
