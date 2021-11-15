@@ -1,19 +1,26 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import  Home  from "./Home";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import Home from "./Home";
 import Uses from "./Uses";
 import Navigation from "./Navigation";
-import About from "./About"
+import About from "./About";
+import Footer from "./Footer";
+import AirDrop from "./AirDrop";
 
 function App() {
   return (
     <Router>
-       < Navigation />
-      <Routes>
-          <Route path="/" exact component={Home} />
-          <Route path="/uses" component={Uses} />
-          <Route path="/about" component={About} />
-          </Routes>
+      <Navigation />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/uses" component={Uses} />
+        <Route path="/about" component={About} />
+        <Route path="/app" component={AirDrop} />
+
+        {/* redirect to "/" if route not exist */}
+        <Redirect to="/" />
+      </Switch>
+      <Footer />
     </Router>
   );
 }

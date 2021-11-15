@@ -10,7 +10,7 @@ const Header = () => {
               <h1 className="display-2">
                 Airdrop Solana Tokens to Thousands of Wallets <br/> in few clicks!
               </h1>
-              <button class="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-success" type="submit">
                 Start Now!
               </button>
             </div>

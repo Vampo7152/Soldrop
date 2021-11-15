@@ -279,3 +279,13 @@ footer .main-hero-para {
     max-width: 1400px !important;
   }
 }
+
+.wallet-btn-container {
+  width: 100vw;
+  min-height: calc(100vh - 60px - 365px);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
