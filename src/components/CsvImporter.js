@@ -5,8 +5,9 @@ import { csvToJson } from "../utils/csvtojson";
 export default function CsvImporter({ setWallets, decimal }) {
   const handleFileSelect = (e) => {
     const file = e.target.files[0];
-    if (file.type !== "text/csv") {
-      alert("Please select a CSV file");
+    if (!file) return;
+    if (file.type !== "text/csv" && !file.name.endsWith(".csv")) {
+      alert("Only csv files are accepted.");
       return;
     } else {
       const reader = new FileReader();
