@@ -52,3 +52,33 @@ export function customTokenToDecimal(amount, decimals) {
 export function customTokenToAmount(amount, decimals) {
   return amount / 10 ** decimals;
 }
+
+export function jsonToCsv(objArray) {
+  const array = typeof objArray !== "object" ? JSON.parse(objArray) : objArray;
+  let str = `${Object.keys(array[0])
+    .map((value) => `"${value}"`)
+    .join(",")}\r\n`;
+
+  return array.reduce((str, next) => {
+    str += `${Object.values(next)
+      .map((value) => `"${value}"`)
+      .join(",")}\r\n`;
+    return str;
+  }, str);
+}
+
+export const downloadFile = (filename, text) => {
+  const element = document.createElement("a");
+  element.setAttribute(
+    "href",
+    "data:text/plain;charset=utf-8," + encodeURIComponent(text)
+  );
+  element.setAttribute("download", filename);
+
+  element.style.display = "none";
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+};

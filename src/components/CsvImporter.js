@@ -32,7 +32,7 @@ export default function CsvImporter({ setWallets, decimal }) {
 
   return (
     <div>
-      <input type="file" accept=".csv" onChange={handleFileSelect} />
+      <input type="file" accept="text/csv" onChange={handleFileSelect} />
     </div>
   );
 }

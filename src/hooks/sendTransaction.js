@@ -9,7 +9,7 @@ import {
 } from "@solana/web3.js";
 import React, { useCallback, useState } from "react";
 import { decode } from "base58-universal";
-import { LamportsToSol } from "../utils/csvtojson";
+import { downloadFile, jsonToCsv, LamportsToSol } from "../utils/csvtojson";
 import * as splToken from "@solana/spl-token";
 
 export const SendLamportToAddresses = ({
@@ -38,10 +38,14 @@ export const SendLamportToAddresses = ({
         sendTransaction(w.address, w.amount, connection, keypair)
       );
 
-      await Promise.allSettled(allTransactionPromises);
+      const response = await Promise.allSettled(allTransactionPromises);
       setIsLoading(false);
-      console.log("all transactions completed");
-      alert("All transactions completed");
+      console.log(response);
+      const csv = jsonToCsv(response.map((r) => r.value));
+      alert(
+        "Transactions completed.\n Press OK/Close to download Transactions csv."
+      );
+      downloadFile("transactions.csv", csv);
     } else if (tokenType === "spl") {
       const allTransactionPromises = wallets.map((w) =>
         sendTokenTransaction(
@@ -49,10 +53,16 @@ export const SendLamportToAddresses = ({
           w.amount,
           connection,
           keypair,
-          splTokenAddress
+          splTokenAddress,
+          w.orgAmount
         )
       );
-      await Promise.allSettled(allTransactionPromises);
+      const response = await Promise.allSettled(allTransactionPromises);
+      const csv = jsonToCsv(response.map((r) => r.value));
+      alert(
+        "Transactions completed.\n Press OK/Close to download Transactions csv."
+      );
+      downloadFile("transactions.csv", csv);
       setIsLoading(false);
     }
   }, [tokenType, secretKey, wallets, connection, splTokenAddress]);
@@ -70,22 +80,61 @@ export const SendLamportToAddresses = ({
   );
 };
 
-const sendTransaction = async (toPubkey, lamports, connection, keypair) => {
-  let transaction = new Transaction();
-  transaction.add(
-    SystemProgram.transfer({
-      fromPubkey: keypair.publicKey,
-      toPubkey,
-      lamports,
-    })
-  );
+const sendTransaction = (toPubkey, lamports, connection, keypair) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let transaction = new Transaction();
+      transaction.add(
+        SystemProgram.transfer({
+          fromPubkey: keypair.publicKey,
+          toPubkey,
+          lamports,
+        })
+      );
 
-  await sendAndConfirmTransaction(connection, transaction, [keypair]);
-  console.log(
-    `${LamportsToSol(lamports)} Sol sent to ${
-      toPubkey.slice(0, 6) + "..." + toPubkey.slice(-6)
-    }`
-  );
+      try {
+        const res = await sendAndConfirmTransaction(
+          connection,
+          transaction,
+          [keypair],
+          { commitment: "processed" }
+        );
+        if (res) {
+          resolve({
+            Wallet: toPubkey,
+            Amount: LamportsToSol(lamports),
+            Status: "Success",
+            Signature: "https://explorer.solana.com/tx/" + res,
+            Error: "",
+          });
+        } else {
+          resolve({
+            Wallet: toPubkey,
+            Amount: LamportsToSol(lamports),
+            Status: "Failed",
+            Signature: "",
+            Error: "Unknown",
+          });
+        }
+      } catch (e) {
+        resolve({
+          Wallet: toPubkey,
+          Amount: LamportsToSol(lamports),
+          Status: "Failed",
+          Signature: "",
+          Error: e.message || "Unknown",
+        });
+      }
+    } catch (e) {
+      resolve({
+        Wallet: toPubkey,
+        Amount: LamportsToSol(lamports),
+        Status: "Failed",
+        Signature: "",
+        Error: e.message || "Unknown",
+      });
+    }
+  });
 };
 
 export const sendTokenTransaction = async (
@@ -93,35 +142,78 @@ export const sendTokenTransaction = async (
   amount,
   connection,
   fromWallet,
-  tokenAddress
+  tokenAddress,
+  orgAmount
 ) => {
-  var myMint = new PublicKey(tokenAddress);
+  return new Promise(async (resolve) => {
+    try {
+      var myMint = new PublicKey(tokenAddress);
 
-  var myToken = new splToken.Token(
-    connection,
-    myMint,
-    splToken.TOKEN_PROGRAM_ID,
-    fromWallet
-  );
-  // Create associated token accounts for my token if they don't exist yet
-  var fromTokenAccount = await myToken.getOrCreateAssociatedAccountInfo(
-    fromWallet.publicKey
-  );
-  var toTokenAccount = await myToken.getOrCreateAssociatedAccountInfo(
-    new PublicKey(toPubkey)
-  );
-  // Add token transfer instructions to transaction
-  var transaction = new Transaction().add(
-    splToken.Token.createTransferInstruction(
-      splToken.TOKEN_PROGRAM_ID,
-      fromTokenAccount.address,
-      toTokenAccount.address,
-      fromWallet.publicKey,
-      [],
-      amount
-    )
-  );
-  // Sign transaction, broadcast, and confirm
-  await sendAndConfirmTransaction(connection, transaction, [fromWallet]);
-  console.log(`Token sent`);
+      var myToken = new splToken.Token(
+        connection,
+        myMint,
+        splToken.TOKEN_PROGRAM_ID,
+        fromWallet
+      );
+      // Create associated token accounts for my token if they don't exist yet
+      var fromTokenAccount = await myToken.getOrCreateAssociatedAccountInfo(
+        fromWallet.publicKey
+      );
+      var toTokenAccount = await myToken.getOrCreateAssociatedAccountInfo(
+        new PublicKey(toPubkey)
+      );
+      // Add token transfer instructions to transaction
+      var transaction = new Transaction().add(
+        splToken.Token.createTransferInstruction(
+          splToken.TOKEN_PROGRAM_ID,
+          fromTokenAccount.address,
+          toTokenAccount.address,
+          fromWallet.publicKey,
+          [],
+          amount
+        )
+      );
+      try {
+        const res = await sendAndConfirmTransaction(
+          connection,
+          transaction,
+          [fromWallet],
+          { commitment: "processed" }
+        );
+        if (res) {
+          resolve({
+            Wallet: toPubkey,
+            Amount: orgAmount,
+            Status: "Success",
+            Signature: "https://explorer.solana.com/tx/" + res,
+            Error: "",
+          });
+        } else {
+          resolve({
+            Wallet: toPubkey,
+            Amount: orgAmount,
+            Status: "Failed",
+            Signature: "",
+            Error: "Unknown",
+          });
+        }
+      } catch (e) {
+        resolve({
+          Wallet: toPubkey,
+          Amount: orgAmount,
+          Status: "Failed",
+          Signature: "",
+          Error: e.message || "Unknown",
+        });
+      }
+    } catch (e) {
+      resolve({
+        Wallet: toPubkey,
+        Amount: orgAmount,
+        Status: "Failed",
+        Signature: "",
+        Error: "Unknown",
+      });
+    }
+  });
 };
