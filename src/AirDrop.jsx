@@ -34,10 +34,12 @@ function AirDrop() {
   }, [decimals]);
 
   return (
+    <div className="airdrop-main">
+      <h1>Aidrop Sol Tokens Fast, Free & Securely! </h1>
     <div className="wallet-btn-container">
       <label>Secret Key</label>
       <input
-        className="form-field m-2"
+        className="form-field m-2 form-control-lg"
         autoComplete="off"
         type="text"
         value={secretKey}
@@ -45,7 +47,7 @@ function AirDrop() {
         onChange={(e) => setSecretKey(e.target.value)}
         placeholder="Enter your secret key"
       />
-      <div style={{ margin: "20px 0", display: "flex", alignItems: "center" }}>
+      <div style={{ margin: "10px 20px", display: "flex", alignItems: "center", padding: "0 20px" }}>
         <label htmlFor="sol">Sol</label>
         <input
           type="radio"
@@ -59,7 +61,7 @@ function AirDrop() {
             }
           }}
         />
-        <label htmlFor="spl">SPL Token</label>
+        <label htmlFor="spl-token-label">SPL Token</label>
         <input
           type="radio"
           id="spl"
@@ -79,12 +81,13 @@ function AirDrop() {
             autoComplete="off"
             type="text"
             value={splTokenAddress}
-            style={{ maxWidth: "100vw", width: "400px" }}
+            style={{ maxWidth: "100vw", width: "325px", borderRadius:"3px", padding: "5px 10px", fontSize: "14px" }}
             onChange={(e) => setSplTokenAddress(e.target.value)}
             placeholder="Enter SPL token address"
           />
           <input
             type="number"
+            style={{padding: "5px 3px", borderRadius:"3px",fontSize: "14px", width: "70px", marginBottom:"2.5rem"}}
             value={decimals}
             onChange={(e) => setDecimals(e.target.value)}
             min="0"
@@ -102,25 +105,26 @@ function AirDrop() {
         />
       )}
       {airdropWallets.length > 0 && (
-        <div style={{ height: "400px", overflow: "auto" }}>
+        <div style={{ height: "400px", overflow: "auto", color: "rgb(13, 18, 29)", marginTop:"4rem", fontSize:"13px" }}>
           <table>
             <thead>
               <tr>
-                <th>Wallet</th>
-                <th>Amount</th>
+                <th  style={{fontSize:"17px", marginBottom:"50px", padding:"10px 0px" , paddingLeft:"12px", borderBottom:"1px solid rgb(13, 18, 29)"}}>Wallet</th>
+                <th style={{fontSize:"17px", marginBottom:"50px", padding:"10px 0px", paddingRight:"10px", borderBottom:"1px solid rgb(13, 18, 29)"}}>Amount</th>
               </tr>
             </thead>
             <tbody>
               {airdropWallets.map((wallet, i) => (
                 <tr key={`wallet-${i}`}>
-                  <td>{wallet.address}</td>
-                  <td>{wallet.orgAmount}</td>
+                  <td style={{fontSize:"12px", padding:"7px 12px", }}>{wallet.address}</td>
+                  <td style={{fontSize:"12px",padding:"7px 12px"}}>{wallet.orgAmount}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       )}
+    </div>
     </div>
   );
 }

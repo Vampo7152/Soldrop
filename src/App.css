@@ -201,6 +201,51 @@ header{
 
 /*                FAQ STYlING STARTS HERE                  */
 
+.accordion {
+  list-style: none;
+}
+
+.accordion_item {
+  border-top: 1px solid #9f9f9f;
+}
+
+.button-faq {
+  font-size: 16px;
+  background-color: #008593;
+  color: #fff;
+  text-align: left;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.control {
+  font-size: 20px;
+}
+
+.answer {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+/* activate toggle */
+.accordion_item.active .button {
+  background-color: #105057;
+}
+.answer_wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.2s;
+}
+
+
+
 /*                FAQ STYlING ENDS HERE                  */
 
 /*                FOOTER STYlING STARTS HERE                  */
@@ -258,6 +303,46 @@ footer .main-hero-para {
 }
 
 /*                FOOTER STYlING STARTS HERE                  */
+
+.airdrop-main{
+  background-color:#cbd5e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.airdrop-main h1{
+  margin-top: 5rem;
+  font-size: 3rem;
+  color: rgb(13, 18, 29);
+  padding: 0px 25px;
+}
+.wallet-btn-container{
+  height: 70vh;
+  width:100%;
+  margin: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.main-label{
+  font-size: 1.5rem;
+  color: rgb(13, 18, 29);
+  padding: 1.5rem 3rem;
+}
+.sol-token-label{
+  color: rgb(13, 18, 29);
+  font-size: 1.5rem;
+  margin: 1.5rem 0.7rem;
+}
+.spl-token-label{
+  color: rgb(13, 18, 29);
+  font-size: 1.5rem;
+  margin: 1.5rem 0.7rem;
+  margin-left: 7rem;
+}
+
+
 
 @media (min-width: 1500px) {
   .container,
