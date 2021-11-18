@@ -109,11 +109,11 @@ function AirDrop() {
           <table>
             <thead>
               <tr>
-                <th  style={{fontSize:"17px", marginBottom:"50px", padding:"10px 0px" , paddingLeft:"12px", borderBottom:"1px solid rgb(13, 18, 29)"}}>Wallet</th>
+                <th style={{fontSize:"17px", marginBottom:"50px", padding:"10px 0px" , paddingLeft:"12px", borderBottom:"1px solid rgb(13, 18, 29)"}}>Wallet</th>
                 <th style={{fontSize:"17px", marginBottom:"50px", padding:"10px 0px", paddingRight:"10px", borderBottom:"1px solid rgb(13, 18, 29)"}}>Amount</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody style={{borderBottom:"1px solid rgb(13, 18, 29)"}}>
               {airdropWallets.map((wallet, i) => (
                 <tr key={`wallet-${i}`}>
                   <td style={{fontSize:"12px", padding:"7px 12px", }}>{wallet.address}</td>

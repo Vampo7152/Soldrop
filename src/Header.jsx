@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
               <h1 className="display-2">
                 Airdrop Solana Tokens to Thousands of Wallets <br/> in few clicks!
               </h1>
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-success" type="submit" onClick={() => history.push("/app")}>
                 Start Now!
               </button>
             </div>
