@@ -3,59 +3,24 @@ import React from "react";
 const Footer = () => {
   return (
     <>
- <footer>
+      <footer>
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-10 mx-auto">
               <div className="row">
-                <div className="col-6 col-lg-6">
-                  <h2>Services</h2>
-                  <ul>
-                    <li>
-                      <a href="#">About</a>
-                    </li>
-                    <li>
-                      <a href="#">About</a>
-                    </li>
-                    <li>
-                      <a href="#">About</a>
-                    </li>
-                    <li>
-                      <a href="#">About</a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="col-6 col-lg-6">
-                  <h2>Follow Us</h2>
-                  <div className="row">
-                    <div className="col-3 mx-auto">
-                      <i className="fab fa-facebook-f fontawesome-style"></i>
-                    </div>
-                    <div className="col-3 mx-auto">
-                      <a
-                        href="#">
-                        <i className="fab fa-instagram fontawesome-style"></i>
-                      </a>
-                    </div>
-                    <div className="col-3 mx-auto">
-                      <i className="fab fa-youtube fontawesome-style"></i>
-                    </div>
-                    <div className="col-3 mx-auto">
-                      <i className="fab fa-twitter fontawesome-style"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <hr />
-              <div className="mt-5">
+              <div className="mt-4">
                 <p className="main-hero-para text-center w-100">
-                  Copyright @ 2021 Vampo. All rights reserved.
+                  Developed by{" "}
+                  <a href="https://twitter.com/Umang_Veerma" target="_blank">
+                    @Vampo
+                  </a>
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
+</div>
       </footer>
     </>
   );

@@ -4,7 +4,7 @@ const WhenToUse = () => {
   return (
     <>
 <section class="text-gray-600 body-font">
-<div class="container px-10 py-24 mx-auto flex flex-wrap text-xl text-gray-500">
+<div class="container px-10 pt-28 pb-20 mx-auto flex flex-wrap text-xl text-gray-500">
   <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
     <div class="flex flex-wrap w-full">
         <div class="flex relative pb-20">

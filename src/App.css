@@ -51,8 +51,15 @@ html {
   border: 1px solid #18EC98 ;
 }
 .toogle-btn{
-  color: #cbd5e0;
-  background-color: rgb(13, 18, 29);
+  color:white;
+  background-color: transparent;
+  border: none;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 }
  
 /*               NAVBAR STYLING ENDS HERE!       26262B       */
@@ -81,7 +88,7 @@ header{
   padding:12px 27px;
   border-radius: 8px;
   font-size: 18px;
-  margin-top: 8px;
+  margin-top: 30px;
   border: none;
 }
 .main-hero-container button:hover{
@@ -108,7 +115,7 @@ header{
 .work-container {
   width: 80vw;
   padding: 5rem;
-  box-shadow: 0px -8px 1rem 2px #18EC98;
+  box-shadow: 0px -8px 3rem 3px #18EC98;
   margin-top: -10rem !important;
 
   background-color: rgb(13, 18, 29);
@@ -138,7 +145,7 @@ header{
 
 .fontawesome-style {
   font-size: 2.3rem;
-  color:black;
+  color:rgb(13, 18, 29);
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
@@ -156,87 +163,59 @@ header{
 /*               WORKS STYLING ENDS HERE!              */
 
 /*               WHEN TO USE STYLING STARTS HERE!              */
-.common-section {
-  margin: 10rem 0;
-}
 
-.our-services img {
-  width: 50%;
-  height: 70%;
-  margin-top: 7rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.8rem 0.8rem;
-  border-radius: 1.5rem;
-}
+/*  THE STYLING HAS BEEN DONE USING TAILWIND TO GET
+    SEEMLESS & RESPONSIVE CHAIN LINK DESIGN :) */
 
-
-.our-services .main-heading {
-  font-weight: bolder;
-  text-align: center;
-}
-
-.our-services-info {
-  margin-top: 5rem;
-}
-
-.our-services .our-services-number {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 0.1rem solid var(--primary-color);
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  display: grid;
-  place-items: center;
-}
-
-.our-services-data {
-  padding-left: 2rem;
-}
-
-.our-services .our-services-data p {
-  margin: 1rem 0;
-}
 /*             WHEN TO USE STYLING ENDS HERE!              */
 
 /*                FAQ STYlING STARTS HERE                  */
 
 .accordion {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  margin-bottom: 70px;
 }
 
 .accordion_item {
-  border-top: 1px solid #9f9f9f;
+  border-top: 1px solid #c2c2c2;
 }
 
 .button-faq {
-  font-size: 16px;
-  background-color: #008593;
-  color: #fff;
+  font-size: 20px;
+  background-color: transparent;
+  color:rgb(13, 18, 29) ;
   text-align: left;
-  font-weight: 700;
+  font-weight: 500;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 8px;
+  padding: 20px 10px;
   cursor: pointer;
   border: none;
+  width:100%;
+
 }
 
 .control {
-  font-size: 20px;
+  font-size: 30px;
+  color: #18EC98;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .answer {
-  background-color: #f7f7f7;
+  background-color: #cbd5e0;
   padding: 20px;
 }
 
-/* activate toggle */
 .accordion_item.active .button {
-  background-color: #105057;
+  background-color: #000000;
 }
 .answer_wrapper {
   height: 0;
@@ -244,16 +223,14 @@ header{
   transition: height ease 0.2s;
 }
 
-
-
 /*                FAQ STYlING ENDS HERE                  */
 
 /*                FOOTER STYlING STARTS HERE                  */
 
 footer {
-  padding: 5rem 0;
-  background-color: #182334;
-  color: #fff;
+  padding: 5rem 2rem;
+  background-color: rgb(13, 18, 29);
+  color: #cbd5e0;
 }
 
 footer h2 {
@@ -269,64 +246,57 @@ footer li {
   margin: 1rem 0;
 }
 
-footer li:hover {
-  color: var(--primary-color);
-}
-
-footer .fontawesome-style {
-  font-size: 2.3rem;
-  color: var(--primary-color);
-  background-color: transparent;
-  width: 0rem;
-  height: 0rem;
-  margin: 2rem 0;
-  cursor: pointer;
+footer a:hover {
+  color: #18EC98;
 }
 
 footer .fontawesome-style:hover {
   transition: all 1s;
-  animation: rotatefont 1s linear infinite alternate-reverse;
   color: #fff;
 }
 
-@keyframes rotatefont {
-  0% {
-    transform: scale(0.6);
-  }
-  100% {
-    transform: scale(1.2);
-  }
-}
 
 footer .main-hero-para {
   margin: 0;
 }
+.icon-styling{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+.icon-styling .itemss{
+  height: 10px;
+  width: 10px;
+}
+
 
 /*                FOOTER STYlING STARTS HERE                  */
 
+/*  AIRDROP FUNCTIONALIY PAGE STARTS HERE */
+
 .airdrop-main{
-  background-color:#cbd5e0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.airdrop-main h1{
-  margin-top: 5rem;
-  font-size: 3rem;
-  color: rgb(13, 18, 29);
-  padding: 0px 25px;
+  background-color: #f1f3f5 ;
 }
 .wallet-btn-container{
-  height: 70vh;
-  width:100%;
-  margin: 10rem 0;
   display: flex;
   flex-direction: column;
+  height: 70vh;
+  width: 100%;
+  justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
 }
+.airdrop-head{
+  font-size: 30px;
+  margin-bottom: 65px;
+  margin-top: 30px;
+  font-weight: 550;
+}
+
 .main-label{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: rgb(13, 18, 29);
   padding: 1.5rem 3rem;
 }
@@ -342,7 +312,10 @@ footer .main-hero-para {
   margin-left: 7rem;
 }
 
+/*  AIRDROP FUNCTIONALIY PAGE ENDS HERE */
 
+
+/*  RESPONSIVE DESIGN CHANGES STARTS */
 
 @media (min-width: 1500px) {
   .container,
@@ -365,12 +338,30 @@ footer .main-hero-para {
   }
 }
 
-.wallet-btn-container {
-  width: 100vw;
-  min-height: calc(100vh - 60px - 365px);
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 400px){
+  .airdrop-head{
+    margin-left: 20px ;
+    margin-right: 20px ;
+  }
+  .main-hero-container h1{
+    font-size: 28px;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+  .work-container-subdiv {
+    padding: 0 15px;
+  }
+  .airdrop-head{
+    margin-top: 10px;
+    margin-bottom: 60px;
+  }
+  .main-label{
+    padding-top: 10px;
+  }
+  .main-hero-container button{
+    margin-top: 10px;
+   margin-left: 90px;
+   margin-right: 90px;
+  }
 }
+/*  RESPONSIVE DESIGN CHANGES ENDS */

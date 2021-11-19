@@ -17,7 +17,7 @@ const Header = () => {
               </button>
             </div>
             <div className="col-12 col-lg-6 header-right-side d-flex justify-content-center align-items-center main-herosection-images">
-              <img src="Airdrop3.png" alt="heroimg" className="img-fluid" />
+              <img src="Airdrop-final.png" alt="Airdrop" className="img-fluid" />
             </div>
           </div>
         </section>
