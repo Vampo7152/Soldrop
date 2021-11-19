@@ -42,9 +42,7 @@ export const SendLamportToAddresses = ({
       setIsLoading(false);
       console.log(response);
       const csv = jsonToCsv(response.map((r) => r.value));
-      alert(
-        "Transactions completed.\n Press OK/Close to download Transactions csv."
-      );
+      alert("Transactions completed.");
       downloadFile("transactions.csv", csv);
     } else if (tokenType === "spl") {
       const allTransactionPromises = wallets.map((w) =>

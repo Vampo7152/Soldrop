@@ -68,17 +68,11 @@ export function jsonToCsv(objArray) {
 }
 
 export const downloadFile = (filename, text) => {
-  const element = document.createElement("a");
+  const element = document.getElementById("download-results");
+  element.style.display = "block";
   element.setAttribute(
     "href",
     "data:text/plain;charset=utf-8," + encodeURIComponent(text)
   );
   element.setAttribute("download", filename);
-
-  element.style.display = "none";
-  document.body.appendChild(element);
-
-  element.click();
-
-  document.body.removeChild(element);
 };
