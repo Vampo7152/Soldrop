@@ -33,21 +33,20 @@ function Navigation() {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/uses">
-                    Uses
+                    Steps to Use
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about">
-                    About
-                  </Link>
+                  <a className="nav-link" href="#" target="_blank">Documentation</a>
                 </li>
-              </ul>
-              <button
-                className="btn btn-outline-success btn-styl"
-                onClick={() => history.push("/app")}
+                <li
+                className="nav-item"
               >
+                <Link className="nav-link" to="/app">
                 Start
-              </button>
+                  </Link>
+              </li>
+              </ul>
             </div>
           </div>
         </nav>

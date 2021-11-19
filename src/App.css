@@ -26,12 +26,16 @@ html {
   padding: 10px 0px;
   
 }
+
 .navbar li {
   padding: 0px 15px;
   color: #cbd5e0;
 }
 .navbar li a:hover {
   color: #18EC98 !important;
+}
+.nav-link{
+  color:#cbd5e0 !important;
 }
 .btn-styl{
   color: black ;
@@ -169,107 +173,36 @@ header{
 
 /*             WHEN TO USE STYLING ENDS HERE!              */
 
-/*                FAQ STYlING STARTS HERE                  */
-
-.accordion {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-  margin-bottom: 70px;
-}
-
-.accordion_item {
-  border-top: 1px solid #c2c2c2;
-}
-
-.button-faq {
-  font-size: 20px;
-  background-color: transparent;
-  color:rgb(13, 18, 29) ;
-  text-align: left;
-  font-weight: 500;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10px;
-  cursor: pointer;
-  border: none;
-  width:100%;
-
-}
-
-.control {
-  font-size: 30px;
-  color: #18EC98;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.answer {
-  background-color: #cbd5e0;
-  padding: 20px;
-}
-
-.accordion_item.active .button {
-  background-color: #000000;
-}
-.answer_wrapper {
-  height: 0;
-  overflow: hidden;
-  transition: height ease 0.2s;
-}
-
-/*                FAQ STYlING ENDS HERE                  */
-
 /*                FOOTER STYlING STARTS HERE                  */
 
 footer {
   padding: 5rem 2rem;
   background-color: rgb(13, 18, 29);
   color: #cbd5e0;
-}
-
-footer h2 {
-  color: #fff;
-}
-
-footer li {
-  list-style: none;
-  font-size: 1.5rem;
-  font-weight: lighter;
-  color: #fff;
-  cursor: pointer;
-  margin: 1rem 0;
-}
-
-footer a:hover {
-  color: #18EC98;
-}
-
-footer .fontawesome-style:hover {
-  transition: all 1s;
-  color: #fff;
-}
-
-
-footer .main-hero-para {
-  margin: 0;
-}
-.icon-styling{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  margin: 20px;
+  flex-direction: column ;
 }
-.icon-styling .itemss{
-  height: 10px;
-  width: 10px;
+
+footer h1 {
+  color: #cbd5e0;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+footer p{
+  margin-bottom: 1rem;
+}
+footer a{
+  color: #cbd5e0;
+}
+footer a:hover {
+  color: #18EC98 ;
+}
+.foot-para{
+  font-size: 1.3rem;
+  color: #cbd5e0;
+  font-weight: lighter;
+  width: 75%;
+  margin-bottom: 1.2rem;
 }
 
 
@@ -344,7 +277,7 @@ footer .main-hero-para {
     margin-right: 20px ;
   }
   .main-hero-container h1{
-    font-size: 28px;
+    font-size: 25px;
     margin-bottom: 30px;
     align-items: center;
   }

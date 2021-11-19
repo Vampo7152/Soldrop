@@ -5,34 +5,31 @@ const Works = () => {
     <>
       <section className="worksDiv">
         <div className="work-container container">
-          <h1 className="main-heading text-center">How It Works?</h1>
+          <h1 className="main-heading text-center">When to Use?</h1>
           <div className="row">
             <div className="col-12 col-lg-4 text-container work-container-subdiv">
-              <i className="fal fa-file-csv fontawesome-style "></i>
+            <i className="fab fa-fly fontawesome-style" ></i>
               <h2 className="sub-heading fw-bolder text-center">
-                Format CSV Files
+              AirDrops
               </h2>
               <p className="main-hero-para w-100">
-                Format your CSV files according to the suggested from
-                documentation and now you are ready for next step.
+              Are you trying to double your network size with an AirDrop? Export a CSV list of token holders and execute your AirDrop in minutes.
               </p>
             </div>
             <div className="col-12 col-lg-4 text-container work-container-subdiv">
-              <i className="far fa-link fontawesome-style"></i>
-              <h2 className="sub-heading fw-bolder  text-center">Connect Wallet</h2>
+            <i className="far fa-chart-network fontawesome-style"></i>
+              <h2 className="sub-heading fw-bolder  text-center">Bounty Programs</h2>
               <p className="main-hero-para w-100">
-                Format your CSV files according to the suggested form here in
-                and now you are ready for next step.
+              Have a list of token holders that have fulfilled your Bounty requirements? Get them paid up with just a few clicks.
               </p>
             </div>
             <div className="col-12 col-lg-4 text-container work-container-subdiv">
-              <i className="far fa-download fontawesome-style "></i>
+            <i className="fal fa-gifts fontawesome-style"></i>
               <h2 className="sub-heading fw-bolder text-center">
-                Download results
+              Token Giveaways
               </h2>
               <p className="main-hero-para w-100">
-                Format your CSV files according to the suggested form here in
-                and now you are ready for next step.
+              Start a social media campaign, retweet and gain tokens! When the time comes to distribute we'll make it easy!
               </p>
             </div>
           </div>

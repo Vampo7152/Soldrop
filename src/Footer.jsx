@@ -10,12 +10,15 @@ const Footer = () => {
               <div className="row">
               <hr />
               <div className="mt-4">
-                <p className="main-hero-para text-center w-100">
+                <p className="foot-para text-center w-100">
                   Developed by{" "}
                   <a href="https://twitter.com/Umang_Veerma" target="_blank">
                     @Vampo
                   </a>
                 </p>
+                <h1 className="text-center w-100">A <a href="https://superteam.fun/" target="_blank">
+                    @Superteam DAO 
+                  </a> Project</h1>
               </div>
 </div>
 </div>

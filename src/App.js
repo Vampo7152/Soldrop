@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import Home from "./Home";
 import Uses from "./Uses";
 import Navigation from "./Navigation";
-import About from "./About";
 import Footer from "./Footer";
 import AirDrop from "./AirDrop";
 
@@ -14,7 +13,6 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/uses" component={Uses} />
-        <Route path="/about" component={About} />
         <Route path="/app" component={AirDrop} />
 
         {/* redirect to "/" if route not exist */}
