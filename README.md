@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Soldrop- User Guide Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Soldrop is completely Secure way to send Batch Transactions over Solana Ecosystem. Though we use Secret Key method to send Transctions curretly, we are moving ahead and developing the features to do Airdrops just by Connecting your Phantom Wallet and signing Transctions.I assure youregarding the security and reliability of your wallet and its funds, as we never store your data anywhere, not even the transactions and you can clear everything by just clicking a cute refresh Button!        Check out this video guide to learn how to Airdrop the Tokens easily- https://drive.google.com/file/d/1QdCkwoU42Jf-XZUBFvVMEmMuTUQp71_n/view?usp=drivesdk
 
-In the project directory, you can run:
+## Prequsites
 
-### `npm start`
+Format Your CSV files- 
+The File Structure should have to be in this format where we have the wallet address of the person, a Comma(,) and the amount of Token to be send without any space between them. Youcan even check the whole file here to get a clear idea- https://drive.google.com/file/d/1Qp4oQDGBRzlkltsIaLdlor-3R8sw1dNF/view?usp=drivesdk         ![Wallet Structure](https://user-images.githubusercontent.com/91828247/142858896-4311a737-7c91-4add-aec5-615178336f23.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+After the File is Formatted Properly along with Wallet addresses and amount of Tokens, we are ready to do the actual stuff!
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Step-1 
+Format your CSV files with all the wallet addresses according to the pattern provided in the documentation. We already did it by now :)
 
-### `npm test`
+## Step-2
+Click on Start Button at the top of Website and you will be redirected to the pag from where you can continue.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Step-3
+Paste your Wallet's secret Keys first from which you want to Airdrop the Tokens(We never store your data and everything restarts as soon as you refresh the page!)
 
-### `npm run build`
+## Step-4 
+Then Select what Token you want to Airdrop, if its a SPL Token, please specify the contract address of that token along with its decimal.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## We did it!
+Click on the "Send Tokens" button and the process will be completed in few minutes! You can even download the Transaction details as soon as the process completes by clicking on the notification.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Quick Note- heck out this super quick video to see how all things are working if you are a Youtube Person instead of Wikipedia :p  https://drive.google.com/file/d/1QdCkwoU42Jf-XZUBFvVMEmMuTUQp71_n/view?usp=drivesdk
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### I hope you Liked the Website & everything went smoothly. Airdrops in my wallet are appreciated too ;)
